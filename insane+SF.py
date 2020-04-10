@@ -85,7 +85,9 @@ lipidsa.update({      # 1   2   3   4   5   6   7   8   9  10  11  12  13  14  1
     "PXSM": (moltype, " -   -   -  NC3  -  PO4 AM1 AM2 T1A C2A C3A  -   -   -  C1B C2B C3B C4B C5B C6B"),
     "XPSM": (moltype, " -   -   -  NC3  -  PO4 AM1 AM2 T1A C2A C3A C4A C5A  -  C1B C2B C3B C4B  -   - "),
 #PS
-    "DOPS": (moltype, " -   -   -  CNO  -  PO4 GL1 GL2 C1A C2A D3A C4A C5A  -  C1B C2B D3B C4B C5B  - "),
+#RAM
+#   "DOPS": (moltype, " -   -   -  CNO  -  PO4 GL1 GL2 C1A C2A D3A C4A C5A  -  C1B C2B D3B C4B C5B  - "),
+    "DOPS": (moltype, " -   -   -  CNO  -  PO4 GL1 GL2 C1A D2A C3A C4A  -   -  C1B D2B C3B C4B  -  - "),
     "POPS": (moltype, " -   -   -  CNO  -  PO4 GL1 GL2 C1A D2A C3A C4A  -   -  C1B C2B C3B C4B  -   - "),
     "PIPS": (moltype, " -   -   -  CNO  -  PO4 GL1 GL2 C1A D2A D3A C4A  -   -  C1B C2B C3B C4B  -   - "),
     "PQPS": (moltype, " -   -   -  CNO  -  PO4 GL1 GL2 C1A D2A D3A D4A C5A  -  C1B C2B C3B C4B  -   - "),
