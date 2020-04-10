@@ -62,7 +62,9 @@ lipidsa.update({      # 1   2   3   4   5   6   7   8   9  10  11  12  13  14  1
     "POPE": (moltype, " -   -   -  NH3  -  PO4 GL1 GL2 C1A D2A C3A C4A  -   -  C1B C2B C3B C4B  -   - "),
     "PIPE": (moltype, " -   -   -  NH3  -  PO4 GL1 GL2 C1A D2A D3A C4A  -   -  C1B C2B C3B C4B  -   - "),
     "IPPE": (moltype, " -   -   -  NH3  -  PO4 GL1 GL2 C1A C2A C3A C4A  -   -  C1B D2B D3B C4B  -   - "),
-    "DOPE": (moltype, " -   -   -  NH3  -  PO4 GL1 GL2 C1A C2A D3A C4A  -  -   C1B C2B D3B C4B  -   - "),
+#RAM 
+#   "DOPE": (moltype, " -   -   -  NH3  -  PO4 GL1 GL2 C1A C2A D3A C4A  -  -   C1B C2B D3B C4B  -   - "),    
+    "DOPE": (moltype, " -   -   -  NH3  -  PO4 GL1 GL2 C1A D2A C3A C4A  -  -   C1B D2B C3B C4B  -   - "),
     "PEPE": (moltype, " -   -   -  NH3  -  PO4 GL1 GL2 C1A D2A D3A C4A C5A  -  C1B C2B C3B C4B  -   - "),
     "PQPE": (moltype, " -   -   -  NH3  -  PO4 GL1 GL2 C1A D2A D3A D4A C5A  -  C1B C2B C3B C4B  -   - "),
     "PAPE": (moltype, " -   -   -  NH3  -  PO4 GL1 GL2 D1A D2A D3A D4A C5A  -  C1B C2B C3B C4B  -   - "),
@@ -1524,6 +1526,7 @@ if options["-p"]:
     print >>top, '#include "martini.ff/martini_v2.0_lipids_all_201506.itp"\n'
     print >>top, '#include "martini.ff/martini_v2.0_lipids_fatty_acids_201512_additional.itp"\n'
     print >>top, '#include "martini.ff/martini_v2.0_lipids_glycosphingolipids_201609_additional.itp"\n'   
+    print >>top, '#include "martini.ff/martini_v2_omaralab.itp"\n'     
     print >>top, '[ system ]\n; name\n%s\n\n[ molecules ]\n; name  number'%title
     if protein:
         print >>top, "%-10s %5d"%("Protein",1)
