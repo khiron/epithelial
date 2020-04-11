@@ -6,7 +6,7 @@
 ; For a thorough comparison of different mdp options in combination with the Martini force field, see:
 ; D.H. de Jong et al., Martini straight: boosting performance using a shorter cutoff and GPUs, submitted.
 
-;title                    = AspW9C enermin
+title                    = AspW9C enermin
 
 ; TIMESTEP IN MARTINI 
 ; Most simulations are numerically stable with dt=40 fs, 

@@ -1,0 +1,54 @@
+#include "martini.ff/martini_v2.2P.itp"
+#include "martini.ff/martini_v2.0_ions.itp"
+#include "martini.ff/martini_v2.0_lipids_all_201506.itp"
+
+#include "martini.ff/martini_v2.0_lipids_fatty_acids_201512_additional.itp"
+
+#include "martini.ff/martini_v2.0_lipids_glycosphingolipids_201609_additional.itp"
+
+#include "martini.ff/martini_v2_omaralab.itp"
+
+[ system ]
+; name
+INSANE! Membrane UpperLeaflet>LPPC:DPPC:DOPC:PIPC:PAPC:PUPC:POPE:PUPE:DPSM:PNSM:POPC:PAPE:DOPE:OIPC=0.02:0.007:0.026:0.217:0.128:0.123:0.017:0.005:0.043:0.019:0.363:0.014:0.018:0.063 LowerLeaflet>LPPC:DPPC:DOPC:PIPC:PAPC:PUPC:POPA:DOPA:POPE:PUPE:DPPS:POPS:POPI:PIPI:PAPI:PUPI:DPSM:PNSM:POPC:PAPE:DOPE:DOPS:OIPC=0.007:0.003:0.009:0.078:0.046:0.044:0.022:0.011:0.057:0.017:0.002:0.216:0.058:0.013:0.128:0.018:0.015:0.007:0.129:0.047:0.06:0.014:0.026
+
+[ molecules ]
+; name  number
+LPPC             0
+DPPC             0
+DOPC             0
+PIPC             1
+PAPC             1
+PUPC             1
+POPE             0
+PUPE             0
+DPSM             0
+PNSM             0
+POPC             3
+PAPE             0
+DOPE             0
+OIPC             0
+LPPC             0
+DPPC             0
+DOPC             0
+PIPC             0
+PAPC             0
+PUPC             0
+POPA             0
+DOPA             0
+POPE             0
+PUPE             0
+DPPS             0
+POPS             1
+POPI             0
+PIPI             0
+PAPI             1
+PUPI             0
+DPSM             0
+PNSM             0
+POPC             1
+PAPE             0
+DOPE             0
+DOPS             0
+OIPC             0
+PW               0

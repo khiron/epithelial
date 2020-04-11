@@ -2,16 +2,16 @@
 ;	File 'mdout.mdp' was generated
 ;	By user: unknown (1000)
 ;	On host: Yowie
-;	At date: Sat Apr 11 23:54:18 2020
+;	At date: Sat Apr 11 02:56:59 2020
 ;
 ;	Created by:
 ;	                     :-) GROMACS - gmx grompp, 2018.1 (-:
 ;	
 ;	Executable:   /usr/bin/gmx
 ;	Data prefix:  /usr
-;	Working dir:  /home/richard/projects/epithelial
+;	Working dir:  /home/richard/projects/epithelial/martini.ff
 ;	Command line:
-;	  gmx grompp -f ./test.mdp -c testmembrane.gro -p testmembrane.top -o testmembrane.tpr
+;	  gmx grompp -f ../test.mdp -c test.gro -p test.top -o test.tpr
 
 ; VARIOUS PREPROCESSING OPTIONS
 ; Preprocessor information: use cpp syntax.
