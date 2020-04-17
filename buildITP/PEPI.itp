@@ -5,7 +5,7 @@
 ;
 ; Description:
 ;   A general model phosphatidylinositol (PI) lipid 
-;      C16:1(9c) palmitoleic acid, C16:1(9c) palmitoleic acid   
+;      C16:0 palmitic acid , C20:2(11c,14c) eicosadienoic acid   
 ; Parameterization:
 ;   This topology follows the standard Martini 2.0 lipid definitions and building block rules.
 ; Reference(s): 
@@ -15,7 +15,7 @@
 ;   biomolecular simulations. JPC-B, 111:7812-7824, 2007. doi:10.1021/jp071097f 
 ;   T.A. Wassenaar, H.I. Ingolfsson, R.A. Bockmann, D.P. Tieleman, S.J. Marrink. Computational lipidomics with insane: a versatile 
 ;   tool for generating custom membranes for molecular simulations. JCTC, 150410125128004, 2015. doi:10.1021/acs.jctc.5b00209
-; Created: 2020.04.17
+; Created: 2020.04.18
 ;
 ;@INSANE alhead=PI, allink=G G, altail=CCDDC CCCC, alname=PEPI, charge=-1.0
 ;@RESNTEST PEP==PEPI if: atoms[0]==C1  and atoms[4]==GL1

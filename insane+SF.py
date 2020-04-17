@@ -90,6 +90,7 @@ lipidsa.update({      # 1   2   3   4   5   6   7   8   9  10  11  12  13  14  1
     "PBSM": (moltype, " -   -   -  NC3  -  PO4 AM1 AM2 T1A C2A C3A  -   -   -  C1B C2B C3B C4B C5B  - "),
     "PXSM": (moltype, " -   -   -  NC3  -  PO4 AM1 AM2 T1A C2A C3A  -   -   -  C1B C2B C3B C4B C5B C6B"),
     "XPSM": (moltype, " -   -   -  NC3  -  PO4 AM1 AM2 T1A C2A C3A C4A C5A  -  C1B C2B C3B C4B  -   - "),
+    
 #PS
 #RAM - modified
 #   "DOPS": (moltype, " -   -   -  CNO  -  PO4 GL1 GL2 C1A C2A D3A C4A C5A  -  C1B C2B D3B C4B C5B  - "),
@@ -166,6 +167,11 @@ lipidsa.update({      # 1   2   3   4   5   6   7   8   9  10  11  12  13  14  1
     "w9DL": (moltype, " -   -   -  SID  -  BB  GL1  -  C1A D2A C3A C4A  -   -   -   -   -   -   -   - "),
 ## Monoacylglycerol
     "GMO":  (moltype, " -   -   -   -   -   -  GL1 GL2 C1A C2A D3A C4A C5A  -   -   -   -   -   -   - "),
+    
+## Plasmenylcholines 
+    "DPPMC": (moltype, " -   -   -  NC3  -  PO4 GL1 GL2 C1A C2A C3A C4A  -   -  C1B C2B C3B C4B  -   - "),
+    
+    
 })
 
 
@@ -210,7 +216,7 @@ lipidsa.update({      # 1     2    3    4    5   6   7   8   9    10    11    12
     "PIPI": (moltype, " C1   C2   C3  PO4    -   -   -   -   -     -     -     -     -     -    -     -     -   GL1   GL2  C1A  D2A  D3A  C4A   -   C1B  C2B  C3B  C4B   -    -    - "),
 #RAM - modified    
 #    "PEPI": (moltype, " C1   C2   C3  PO4    -   -   -   -   -     -     -     -     -     -    -     -     -   GL1   GL2  C1A  D2A  D3A  C4A  CA5  C1B  C2B  C3B  C4B   -    -    - "),
-    "PEPI": (moltype, " C1   C2   C3  PO4    -   -   -   -   -     -     -     -     -     -    -     -     -   GL1   GL2  C1A  D2A  D3A  D4A  C5A  C1B  C2B  C3B  C4B   -    -    - "),
+    "PEPI": (moltype, " C1   C2   C3  PO4    -   -   -   -   -     -     -     -     -     -    -     -     -   GL1   GL2  C1A  C2A  D3A  D4A  C5A  C1B  C2B  C3B  C4B   -    -    - "),
     
 #RAM - modified    
 #    "PQPI": (moltype, " C1   C2   C3  PO4    -   -   -   -   -     -     -     -     -     -    -     -     -   GL1   GL2  C1A  D2A  D3A  D4A  CA5  C1B  C2B  C3B  C4B   -    -    - "),

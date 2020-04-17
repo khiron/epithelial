@@ -10,10 +10,10 @@
 
 [ system ]
 ; name
-INSANE! Membrane UpperLeaflet>DODG=1.0 LowerLeaflet>DODG=1.0
+INSANE! Membrane UpperLeaflet>PEPI=1.0 LowerLeaflet>PEPI=1.0
 
 [ molecules ]
 ; name  number
-DODG            16
-DODG            16
+PEPI            16
+PEPI            16
 PW               0
