@@ -1,0 +1,85 @@
+#include "martini.ff/martini_v2.2P.itp"
+#include "martini.ff/martini_v2.0_ions.itp"
+#include "martini.ff/martini_v2.0_lipids_all_201506.itp"
+
+#include "martini.ff/martini_v2.0_lipids_fatty_acids_201512_additional.itp"
+
+#include "martini.ff/martini_v2.0_lipids_glycosphingolipids_201609_additional.itp"
+
+#include "martini.ff/martini_v2_epithelial.itp"
+
+[ system ]
+; name
+INSANE! Membrane UpperLeaflet>OIPE:PQPE:OQPE:OAPE:OUPE:PBSM:PXSM:DODG:LPPC:DPPC:POPC:DOPC:PIPC:OIPC:PAPC:PUPC:POPE:OPPE:DOPE:PAPE:PUPE:POPG:DOPG:DPSM:PNSM:PODG=0.003:0.002:0.001:0.003:0.002:0.009:0.005:0.004:0.01:0.004:0.174:0.012:0.104:0.059:0.062:0.059:0.008:0.003:0.009:0.007:0.002:0.005:0.003:0.02:0.009:0.008 LowerLeaflet>OIPE:PQPE:OQPE:OAPE:OUPE:OGPS:DOPI:PEPI:PQPI:PBSM:PXSM:DODG:PAPS:LPPC:DPPC:POPC:DOPC:PIPC:OIPC:PAPC:PUPC:POPA:DOPA:POPE:OPPE:DOPE:PAPE:PUPE:POPG:DOPG:DPPS:POPS:DOPS:POPI:PIPI:PAPI:PUPI:DPSM:PNSM:PODG=0.01:0.008:0.005:0.011:0.006:0.005:0.009:0.005:0.047:0.003:0.002:0.003:0.005:0.004:0.001:0.068:0.005:0.041:0.023:0.024:0.023:0.012:0.006:0.03:0.01:0.032:0.025:0.009:0.004:0.003:0.001:0.114:0.007:0.03:0.007:0.068:0.01:0.008:0.004:0.005
+
+[ molecules ]
+; name  number
+OIPE             2
+PQPE             1
+OQPE             0
+OAPE             2
+OUPE             1
+PBSM             8
+PXSM             4
+DODG             3
+LPPC             8
+DPPC             3
+POPC           155
+DOPC            10
+PIPC            93
+OIPC            52
+PAPC            55
+PUPC            52
+POPE             7
+OPPE             2
+DOPE             8
+PAPE             6
+PUPE             1
+POPG             4
+DOPG             2
+DPSM            17
+PNSM             8
+PODG             7
+OIPE             7
+PQPE             6
+OQPE             3
+OAPE             8
+OUPE             4
+OGPS             3
+DOPI             6
+PEPI             3
+PQPI            35
+PBSM             2
+PXSM             1
+DODG             2
+PAPS             3
+LPPC             3
+DPPC             0
+POPC            51
+DOPC             3
+PIPC            31
+OIPC            17
+PAPC            18
+PUPC            17
+POPA             9
+DOPA             4
+POPE            22
+OPPE             7
+DOPE            24
+PAPE            18
+PUPE             6
+POPG             3
+DOPG             2
+DPPS             0
+POPS            86
+DOPS             5
+POPI            22
+PIPI             5
+PAPI            51
+PUPI             7
+DPSM             6
+PNSM             3
+PODG             3
+PW           32349
+NA+            356
+CL-            356
