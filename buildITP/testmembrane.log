@@ -1,5 +1,5 @@
-Log file opened on Sat Apr 18 01:55:27 2020
-Host: Yowie  pid: 329  rank ID: 0  number of ranks:  1
+Log file opened on Sat Apr 18 03:24:22 2020
+Host: Yowie  pid: 1587  rank ID: 0  number of ranks:  1
                       :-) GROMACS - gmx mdrun, 2018.1 (-:
 
                             GROMACS is written by:
@@ -143,7 +143,7 @@ Input Parameters:
    comm-mode                      = Linear
    nstcomm                        = 100
    bd-fric                        = 0
-   ld-seed                        = 1837403937
+   ld-seed                        = 869261876
    emtol                          = 10
    emstep                         = 0.01
    niter                          = 20
@@ -293,7 +293,7 @@ qm-opts:
          t0                       = 0
          sigma                    = 0
 grpopts:
-   nrdf:        1341
+   nrdf:        1245
    ref-t:           0
    tau-t:           0
 annealing:          No
@@ -307,7 +307,7 @@ Using 1 MPI thread
 Using 8 OpenMP threads 
 
 Pinning threads with an auto-selected logical core stride of 1
-System total charge: -32.000
+System total charge: 0.000
 Reaction-Field:
 epsRF = 0, rc = 1.1, krf = 0.375657, crf = 1.36364, epsfac = 55.5742
 The electrostatics potential has its minimum at r = 1.1
@@ -321,25 +321,8 @@ Using a 4x4 pair-list setup:
 Using full Lennard-Jones parameter combination matrix
 
 Removing pbc first time
-
-Initializing LINear Constraint Solver
-
-++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
-B. Hess
-P-LINCS: A Parallel Linear Constraint Solver for molecular simulation
-J. Chem. Theory Comput. 4 (2008) pp. 116-122
--------- -------- --- Thank You --- -------- --------
-
-The number of constraints is 96
-96 constraints are involved in constraint triangles,
-will apply an additional matrix expansion of order 16 for couplings
-between constraints inside triangles
 Initiating Steepest Descents
-   Rel. Constraint Deviation:  RMS         MAX     between atoms
-       Before LINCS          0.429670    0.831458    272    273
-        After LINCS          0.000000    0.000001    151    153
-
-Started Steepest Descents on rank 0 Sat Apr 18 01:55:28 2020
+Started Steepest Descents on rank 0 Sat Apr 18 03:24:22 2020
 
 Steepest Descents:
    Tolerance (Fmax)   =  1.00000e+01
@@ -349,9 +332,9 @@ Steepest Descents:
 
    Energies (kJ/mol)
            Bond       G96Angle        LJ (SR)   Coulomb (SR)      Potential
-    1.11862e+04    6.95471e+03    5.76974e+22   -4.99872e+02    5.76974e+22
- Pressure (bar)   Constr. rmsd
-   -1.62984e+18    2.28349e-07
+    6.95646e+03    7.09078e+02    1.64270e+23    4.40922e+02    1.64270e+23
+ Pressure (bar)
+    0.00000e+00
 
            Step           Time
               1        1.00000
@@ -405,12 +388,10 @@ precision, given your starting configuration and EM parameters.
 
 Double precision normally gives you higher accuracy, but this is often not
 needed for preparing to run molecular dynamics.
-You might need to increase your constraint accuracy, or turn
-off constraints altogether (set constraints = none in mdp file)
 
 Steepest Descents converged to machine precision in 15 steps,
 but did not reach the requested Fmax < 10.
-Potential Energy  =  5.7697398e+22
-Maximum force     =            inf on atom 5
+Potential Energy  =  1.6426984e+23
+Maximum force     =            inf on atom 2
 Norm of force     =            inf
-Finished mdrun on rank 0 Sat Apr 18 01:55:29 2020
+Finished mdrun on rank 0 Sat Apr 18 03:24:22 2020

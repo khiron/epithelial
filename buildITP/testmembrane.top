@@ -10,10 +10,10 @@
 
 [ system ]
 ; name
-INSANE! Membrane UpperLeaflet>PEPI=1.0 LowerLeaflet>PEPI=1.0
+INSANE! Membrane UpperLeaflet>IQPME=1.0 LowerLeaflet>IQPME=1.0
 
 [ molecules ]
 ; name  number
-PEPI            16
-PEPI            16
+IQPME           16
+IQPME           16
 PW               0
