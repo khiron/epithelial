@@ -9,6 +9,9 @@ previous = "20130829.22.TAW"
 # Also take in lipid name
 # Edits: by Helgi I. Ingolfsson (all edits are marked with: # HII edit - lipid definition )
 
+# Modify insane to add input parameter -itpPath 
+# Edits: by Richard Morris (edits marked with #RAM - add input parameter -itpPath)
+
 # PROTOLIPID (diacylglycerol), 18 beads
 #
 # 1-3-4-6-7--9-10-11-12-13-14
@@ -65,6 +68,9 @@ lipidsa.update({      # 1   2   3   4   5   6   7   8   9  10  11  12  13  14  1
 #RAM 
 #   "DOPE": (moltype, " -   -   -  NH3  -  PO4 GL1 GL2 C1A C2A D3A C4A  -  -   C1B C2B D3B C4B  -   - "),    
     "DOPE": (moltype, " -   -   -  NH3  -  PO4 GL1 GL2 C1A D2A C3A C4A  -  -   C1B D2B C3B C4B  -   - "),
+#RAM added
+    "OPPE": (moltype, " -   -   -  NH3  -  PO4 GL1 GL2 C1A C2A C3A C4A  -  -   C1B D2B C3B C4B  -   - "),
+   
     "PEPE": (moltype, " -   -   -  NH3  -  PO4 GL1 GL2 C1A D2A D3A C4A C5A  -  C1B C2B C3B C4B  -   - "),
     "PQPE": (moltype, " -   -   -  NH3  -  PO4 GL1 GL2 C1A D2A D3A D4A C5A  -  C1B C2B C3B C4B  -   - "),
     "PAPE": (moltype, " -   -   -  NH3  -  PO4 GL1 GL2 D1A D2A D3A D4A C5A  -  C1B C2B C3B C4B  -   - "),
@@ -85,7 +91,7 @@ lipidsa.update({      # 1   2   3   4   5   6   7   8   9  10  11  12  13  14  1
     "PXSM": (moltype, " -   -   -  NC3  -  PO4 AM1 AM2 T1A C2A C3A  -   -   -  C1B C2B C3B C4B C5B C6B"),
     "XPSM": (moltype, " -   -   -  NC3  -  PO4 AM1 AM2 T1A C2A C3A C4A C5A  -  C1B C2B C3B C4B  -   - "),
 #PS
-#RAM
+#RAM - modified
 #   "DOPS": (moltype, " -   -   -  CNO  -  PO4 GL1 GL2 C1A C2A D3A C4A C5A  -  C1B C2B D3B C4B C5B  - "),
     "DOPS": (moltype, " -   -   -  CNO  -  PO4 GL1 GL2 C1A D2A C3A C4A  -   -  C1B D2B C3B C4B  -  - "),
     "POPS": (moltype, " -   -   -  CNO  -  PO4 GL1 GL2 C1A D2A C3A C4A  -   -  C1B C2B C3B C4B  -   - "),
@@ -202,8 +208,13 @@ lipidsa.update({      # 1     2    3    4    5   6   7   8   9    10    11    12
     "PAPI": (moltype, " C1   C2   C3  PO4    -   -   -   -   -     -     -     -     -     -    -     -     -   GL1   GL2  D1A  D2A  D3A  D4A  C5A  C1B  C2B  C3B  C4B   -    -    - "),
     "PUPI": (moltype, " C1   C2   C3  PO4    -   -   -   -   -     -     -     -     -     -    -     -     -   GL1   GL2  D1A  D2A  D3A  D4A  D5A  C1B  C2B  C3B  C4B   -    -    - "),
     "PIPI": (moltype, " C1   C2   C3  PO4    -   -   -   -   -     -     -     -     -     -    -     -     -   GL1   GL2  C1A  D2A  D3A  C4A   -   C1B  C2B  C3B  C4B   -    -    - "),
-    "PEPI": (moltype, " C1   C2   C3  PO4    -   -   -   -   -     -     -     -     -     -    -     -     -   GL1   GL2  C1A  D2A  D3A  C4A  CA5  C1B  C2B  C3B  C4B   -    -    - "),
-    "PQPI": (moltype, " C1   C2   C3  PO4    -   -   -   -   -     -     -     -     -     -    -     -     -   GL1   GL2  C1A  D2A  D3A  D4A  CA5  C1B  C2B  C3B  C4B   -    -    - "),
+#RAM - modified    
+#    "PEPI": (moltype, " C1   C2   C3  PO4    -   -   -   -   -     -     -     -     -     -    -     -     -   GL1   GL2  C1A  D2A  D3A  C4A  CA5  C1B  C2B  C3B  C4B   -    -    - "),
+    "PEPI": (moltype, " C1   C2   C3  PO4    -   -   -   -   -     -     -     -     -     -    -     -     -   GL1   GL2  C1A  D2A  D3A  D4A  C5A  C1B  C2B  C3B  C4B   -    -    - "),
+    
+#RAM - modified    
+#    "PQPI": (moltype, " C1   C2   C3  PO4    -   -   -   -   -     -     -     -     -     -    -     -     -   GL1   GL2  C1A  D2A  D3A  D4A  CA5  C1B  C2B  C3B  C4B   -    -    - "),
+    "PQPI": (moltype, " C1   C2   C3  PO4    -   -   -   -   -     -     -     -     -     -    -     -     -   GL1   GL2  C1A  D2A  D3A  D4A  C5A  C1B  C2B  C3B  C4B   -    -    - "),
     "OIPI": (moltype, " C1   C2   C3  PO4    -   -   -   -   -     -     -     -     -     -    -     -     -   GL1   GL2  C1A  D2A  D3A  C4A   -   C1B  D2B  C3B  C4B   -    -    - "),
     "OAPI": (moltype, " C1   C2   C3  PO4    -   -   -   -   -     -     -     -     -     -    -     -     -   GL1   GL2  D1A  D2A  D3A  D4A  C5A  C1B  D2B  C3B  C4B   -    -    - "),
 #Glycolipids
@@ -601,6 +612,7 @@ options = [
     """
 Input/output related options
 """,
+    ("-itpPath",Option(str,         1,        None, "Path to .itp  files")   ),  #RAM - add input param for path to .itp files
     ("-f",      Option(tm.append,   1,        None, "Input GRO or PDB file 1: Protein")),
     ("-o",      Option(str,         1,        None, "Output GRO file: Membrane with Protein")),
     ("-p",      Option(str,         1,        None, "Optional rudimentary topology file")),
@@ -1474,6 +1486,10 @@ if solv:
 else:
     sol = []
 
+## RAM
+## Get the path to ITP files from the command line
+
+    
 
 ## Write the output ##
 
@@ -1520,15 +1536,20 @@ if sol:
 # Print the box
 print >>oStream, "%10.5f%10.5f%10.5f%10.5f%10.5f%10.5f%10.5f%10.5f%10.5f\n"%grobox
 
+#RAM - add .itpPath option
+itpPath = "martini.ff"
+if options["-itpPath"]:
+    itpPath = options["-itpPath"].value
+
 if options["-p"]:
     # Write a rudimentary topology file
     top = open(options["-p"].value,"w")
-    print >>top, '#include "martini.ff/martini_v2.2P.itp"'
-    print >>top, '#include "martini.ff/martini_v2.0_ions.itp"'
-    print >>top, '#include "martini.ff/martini_v2.0_lipids_all_201506.itp"\n'
-    print >>top, '#include "martini.ff/martini_v2.0_lipids_fatty_acids_201512_additional.itp"\n'
-    print >>top, '#include "martini.ff/martini_v2.0_lipids_glycosphingolipids_201609_additional.itp"\n'   
-    print >>top, '#include "martini.ff/martini_v2_omaralab.itp"\n'     
+    print >>top, '#include "'+itpPath+'/martini_v2.2P.itp"'
+    print >>top, '#include "'+itpPath+'/martini_v2.0_ions.itp"'
+    print >>top, '#include "'+itpPath+'/martini_v2.0_lipids_all_201506.itp"\n'
+    print >>top, '#include "'+itpPath+'/martini_v2.0_lipids_fatty_acids_201512_additional.itp"\n'
+    print >>top, '#include "'+itpPath+'/martini_v2.0_lipids_glycosphingolipids_201609_additional.itp"\n'   
+    print >>top, '#include "'+itpPath+'/martini_v2_epithelial.itp"\n'     
     print >>top, '[ system ]\n; name\n%s\n\n[ molecules ]\n; name  number'%title
     if protein:
         print >>top, "%-10s %5d"%("Protein",1)

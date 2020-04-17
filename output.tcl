@@ -2,7 +2,7 @@ mol modselect 0 0 resid 1
 rotate x by 0
 rotate y by 120
 rotate z by 90
-translate by 0 -1.1 0
+translate by 1 -1.1 0
 display projection Orthographic
 rotate x by 30
 rotate y by 20
