@@ -10,7 +10,7 @@
 
 [ system ]
 ; name
-INSANE! Membrane UpperLeaflet>OIPE:PQPE:OQPE:OAPE:OUPE:PBSM:PXSM:DODG:DPPMC:POPMC:DOPMC:PIPMC:OIPMC:OEPMC:PAPMC:PUPMC:POPME:DOPME:OIPME:OQPME:OAPME:OUPME:IAPME:IQPME:LPPC:DPPC:POPC:DOPC:PIPC:OIPC:PAPC:PUPC:POPE:OPPE:DOPE:PAPE:PUPE:POPG:DOPG:DPSM:PNSM:PODG=0.002:0.002:0.001:0.002:0.001:0.007:0.004:0.004:0.007:0.043:0.009:0.009:0.004:0.005:0.012:0.029:0.001:0.006:0.001:0.002:0.014:0.006:0.007:0.001:0.008:0.003:0.147:0.011:0.088:0.05:0.052:0.05:0.007:0.002:0.007:0.006:0.002:0.004:0.003:0.017:0.008:0.007 LowerLeaflet>OIPE:PQPE:OQPE:OAPE:OUPE:OGPS:DOPI:PEPI:PQPI:PBSM:PXSM:DODG:DPPMC:POPMC:DOPMC:PIPMC:OIPMC:OEPMC:PAPMC:PUPMC:POPME:DOPME:OIPME:OQPME:OAPME:OUPME:IAPME:IQPME:PAPS:LPPC:DPPC:POPC:DOPC:PIPC:OIPC:PAPC:PUPC:POPA:DOPA:POPE:OPPE:DOPE:PAPE:PUPE:POPG:DOPG:DPPS:POPS:DOPS:POPI:PIPI:PAPI:PUPI:DPSM:PNSM:PODG=0.008:0.006:0.004:0.009:0.005:0.004:0.008:0.004:0.039:0.003:0.002:0.002:0.003:0.016:0.003:0.003:0.002:0.002:0.004:0.011:0.005:0.02:0.003:0.006:0.052:0.023:0.024:0.003:0.004:0.003:0.001:0.056:0.004:0.034:0.019:0.02:0.019:0.01:0.005:0.025:0.008:0.026:0.02:0.007:0.003:0.002:0.001:0.093:0.006:0.025:0.006:0.055:0.008:0.007:0.003:0.004
+Complex Epithelial membrane generated (2020.04.18) using INSANE
 
 [ molecules ]
 ; name  number
@@ -22,22 +22,22 @@ OUPE             0
 PBSM             5
 PXSM             3
 DODG             3
-DPPMC            5
-POPMC           34
-DOPMC            7
-PIPMC            7
-OIPMC            3
-OEPMC            4
-PAPMC            9
-PUPMC           23
-POPME            0
-DOPME            4
-OIPME            0
-OQPME            1
-OAPME           11
-OUPME            4
-IAPME            5
-IQPME            0
+DPMC             5
+POMC            34
+DOMC             7
+PIMC             7
+OIMC             3
+OEMC             4
+PAMC             9
+PUMC            23
+POME             0
+DOME             4
+OIME             0
+OQME             1
+OAME            11
+OUME             4
+IAME             5
+IQME             0
 LPPC             6
 DPPC             2
 POPC           118
@@ -68,22 +68,22 @@ PQPI            27
 PBSM             2
 PXSM             1
 DODG             1
-DPPMC            2
-POPMC           11
-DOPMC            2
-PIPMC            2
-OIPMC            1
-OEPMC            1
-PAPMC            2
-PUPMC            7
-POPME            3
-DOPME           14
-OIPME            2
-OQPME            4
-OAPME           36
-OUPME           16
-IAPME           16
-IQPME            2
+DPMC             2
+POMC            11
+DOMC             2
+PIMC             2
+OIMC             1
+OEMC             1
+PAMC             2
+PUMC             7
+POME             3
+DOME            14
+OIME             2
+OQME             4
+OAME            36
+OUME            16
+IAME            16
+IQME             2
 PAPS             2
 LPPC             2
 DPPC             0
@@ -112,6 +112,6 @@ PUPI             5
 DPSM             4
 PNSM             2
 PODG             2
-PW           32335
+PW           32331
 NA+            356
 CL-            356

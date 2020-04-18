@@ -168,24 +168,27 @@ lipidsa.update({      # 1   2   3   4   5   6   7   8   9  10  11  12  13  14  1
 ## Monoacylglycerol
     "GMO":  (moltype, " -   -   -   -   -   -  GL1 GL2 C1A C2A D3A C4A C5A  -   -   -   -   -   -   - "),
     
+#RAM: Added Plasmenylcholines 
 ## Plasmenylcholines 
-    "DPPMC": (moltype, " -   -   -  NC3  -  PO4 GL1 N0 C1A C2A C3A C4A  -   -  C3 C2B C3B C4B  -   - "),
-    "POPMC": (moltype, " -   -   -  NC3  -  PO4 GL1 N0 C1A D2A C3A C4A  -   -  C3 C2B C3B C4B  -   - "),
-    "DOPMC": (moltype, " -   -   -  NC3  -  PO4 GL1 N0 C1A D2A C3A C4A  -   -  C3 D2B C3B C4B  -   - "),
-    "PIPMC": (moltype, " -   -   -  NC3  -  PO4 GL1 N0 C1A D2A D3A C4A  -   -  C3 C2B C3B C4B  -   - "),
-    "OIPMC": (moltype, " -   -   -  NC3  -  PO4 GL1 N0 C1A D2A D3A C4A  -   -  C3 D2B C3B C4B  -   - "),
-    "OEPMC": (moltype, " -   -   -  NC3  -  PO4 GL1 N0 C1A C2A D3A D4A C5A  -  C3 D2B C3B C4B  -   - "),
-    "PAPMC": (moltype, " -   -   -  NC3  -  PO4 GL1 N0 D1A D2A D3A D4A C5A  -  C3 C2B C3B C4B  -   - "),
-    "PUPMC": (moltype, " -   -   -  NC3  -  PO4 GL1 N0 D1A D2A D3A D4A D5A  -  C3 C2B C3B C4B  -   - "),
-    "POPME": (moltype, " -   -   -  NH3  -  PO4 GL1 N0 C1A D2A C3A C4A  -   -  C3 C2B C3B C4B  -   - "),
-    "DOPME": (moltype, " -   -   -  NH3  -  PO4 GL1 N0 C1A D2A C3A C4A  -  -   C3 D2B C3B C4B  -   - "),
-    "OIPME": (moltype, " -   -   -  NH3  -  PO4 GL1 N0 C1A D2A D3A C4A  -   -  C3 D2B C3B C4B  -   - "),
-    "OQPME": (moltype, " -   -   -  NH3  -  PO4 GL1 N0 C1A D2A D3A D4A C5A  -  C3 D2B C3B C4B  -   - "),
-    "OAPME": (moltype, " -   -   -  NH3  -  PO4 GL1 N0 D1A D2A D3A D4A C5A  -  C3 D2B C3B C4B  -   - "),
-    "OUPME": (moltype, " -   -   -  NH3  -  PO4 GL1 N0 D1A D2A D3A D4A D5A  -  C3 D2B C3B C4B  -   - "),
+    "DPMC": (moltype, " -   -   -  NC3  -  PO4 GL1 N0 C1A C2A C3A C4A  -   -  C3 C2B C3B C4B  -   - "),
+    "POMC": (moltype, " -   -   -  NC3  -  PO4 GL1 N0 C1A D2A C3A C4A  -   -  C3 C2B C3B C4B  -   - "),
+    "DOMC": (moltype, " -   -   -  NC3  -  PO4 GL1 N0 C1A D2A C3A C4A  -   -  C3 D2B C3B C4B  -   - "),
+    "PIMC": (moltype, " -   -   -  NC3  -  PO4 GL1 N0 C1A D2A D3A C4A  -   -  C3 C2B C3B C4B  -   - "),
+    "OIMC": (moltype, " -   -   -  NC3  -  PO4 GL1 N0 C1A D2A D3A C4A  -   -  C3 D2B C3B C4B  -   - "),
+    "OEMC": (moltype, " -   -   -  NC3  -  PO4 GL1 N0 C1A C2A D3A D4A C5A  -  C3 D2B C3B C4B  -   - "),
+    "PAMC": (moltype, " -   -   -  NC3  -  PO4 GL1 N0 D1A D2A D3A D4A C5A  -  C3 C2B C3B C4B  -   - "),
+    "PUMC": (moltype, " -   -   -  NC3  -  PO4 GL1 N0 D1A D2A D3A D4A D5A  -  C3 C2B C3B C4B  -   - "),
 
-    "IAPME": (moltype, " -   -   -  NH3  -  PO4 GL1 N0 D1A D2A D3A D4A C5A  -  C3 D2B D3B C4B  -   - "),
-    "IQPME": (moltype, " -   -   -  NH3  -  PO4 GL1 N0 C1A D2A D3A D4A C5A  -  C3 D2B D3B C4B  -   - "),
+#RAM: Added Plasmenylethalomines  
+## Plasmenylethalomines  
+    "POME": (moltype, " -   -   -  NH3  -  PO4 GL1 N0 C1A D2A C3A C4A  -   -  C3 C2B C3B C4B  -   - "),
+    "DOME": (moltype, " -   -   -  NH3  -  PO4 GL1 N0 C1A D2A C3A C4A  -  -   C3 D2B C3B C4B  -   - "),
+    "OIME": (moltype, " -   -   -  NH3  -  PO4 GL1 N0 C1A D2A D3A C4A  -   -  C3 D2B C3B C4B  -   - "),
+    "OQME": (moltype, " -   -   -  NH3  -  PO4 GL1 N0 C1A D2A D3A D4A C5A  -  C3 D2B C3B C4B  -   - "),
+    "OAME": (moltype, " -   -   -  NH3  -  PO4 GL1 N0 D1A D2A D3A D4A C5A  -  C3 D2B C3B C4B  -   - "),
+    "OUME": (moltype, " -   -   -  NH3  -  PO4 GL1 N0 D1A D2A D3A D4A D5A  -  C3 D2B C3B C4B  -   - "),
+    "IAME": (moltype, " -   -   -  NH3  -  PO4 GL1 N0 D1A D2A D3A D4A C5A  -  C3 D2B D3B C4B  -   - "),
+    "IQME": (moltype, " -   -   -  NH3  -  PO4 GL1 N0 C1A D2A D3A D4A C5A  -  C3 D2B D3B C4B  -   - "),
     
 })
 
