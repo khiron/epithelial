@@ -15,7 +15,7 @@
 ;   biomolecular simulations. JPC-B, 111:7812-7824, 2007. doi:10.1021/jp071097f 
 ;   T.A. Wassenaar, H.I. Ingolfsson, R.A. Bockmann, D.P. Tieleman, S.J. Marrink. Computational lipidomics with insane: a versatile 
 ;   tool for generating custom membranes for molecular simulations. JCTC, 150410125128004, 2015. doi:10.1021/acs.jctc.5b00209
-; Created: 2020.04.17
+; Created: 2020.04.20
 ;
 ;@INSANE alhead=, allink=G G, altail=CDCC CDCC, alname=DODG, charge=0
 ;@RESNTEST DOD==DODG if: atoms[0]==GL1

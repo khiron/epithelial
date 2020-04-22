@@ -4,16 +4,16 @@
 
 #include "../martini.ff//martini_v2.0_lipids_fatty_acids_201512_additional.itp"
 
-#include "../martini.ff//martini_v2.0_lipids_glycosphingolipids_201609_additional.itp"
-
 #include "../martini.ff//martini_v2_epithelial.itp"
+
+#include "../martini.ff//errata.itp"
 
 [ system ]
 ; name
-INSANE! Membrane UpperLeaflet>IAME=1.0 LowerLeaflet>IAME=1.0
+INSANE! Membrane UpperLeaflet>PQP1=1.0 LowerLeaflet>PQP1=1.0
 
 [ molecules ]
 ; name  number
-IAME            16
-IAME            16
+PQP1            16
+PQP1            16
 PW               0

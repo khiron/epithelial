@@ -1,5 +1,5 @@
-Log file opened on Sun Apr 19 00:00:34 2020
-Host: Yowie  pid: 3853  rank ID: 0  number of ranks:  1
+Log file opened on Wed Apr 22 13:12:40 2020
+Host: Yowie  pid: 461  rank ID: 0  number of ranks:  1
                       :-) GROMACS - gmx mdrun, 2018.1 (-:
 
                             GROMACS is written by:
@@ -143,7 +143,7 @@ Input Parameters:
    comm-mode                      = Linear
    nstcomm                        = 100
    bd-fric                        = 0
-   ld-seed                        = -1495007917
+   ld-seed                        = -1082957717
    emtol                          = 10
    emstep                         = 0.01
    niter                          = 20
@@ -293,7 +293,7 @@ qm-opts:
          t0                       = 0
          sigma                    = 0
 grpopts:
-   nrdf:        1245
+   nrdf:        1373
    ref-t:           0
    tau-t:           0
 annealing:          No
@@ -307,7 +307,7 @@ Using 1 MPI thread
 Using 8 OpenMP threads 
 
 Pinning threads with an auto-selected logical core stride of 1
-System total charge: 0.000
+System total charge: -96.000
 Reaction-Field:
 epsRF = 0, rc = 1.1, krf = 0.375657, crf = 1.36364, epsfac = 55.5742
 The electrostatics potential has its minimum at r = 1.1
@@ -321,8 +321,33 @@ Using a 4x4 pair-list setup:
 Using full Lennard-Jones parameter combination matrix
 
 Removing pbc first time
+
+Initializing LINear Constraint Solver
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+B. Hess
+P-LINCS: A Parallel Linear Constraint Solver for molecular simulation
+J. Chem. Theory Comput. 4 (2008) pp. 116-122
+-------- -------- --- Thank You --- -------- --------
+
+The number of constraints is 160
+160 constraints are involved in constraint triangles,
+will apply an additional matrix expansion of order 16 for couplings
+between constraints inside triangles
 Initiating Steepest Descents
-Started Steepest Descents on rank 0 Sun Apr 19 00:00:34 2020
+   Rel. Constraint Deviation:  RMS         MAX     between atoms
+       Before LINCS          0.793836    1.309377      1      5
+        After LINCS          3.704158    8.705021    497    498
+
+
+Step -1, time -0.01 (ps)  LINCS WARNING
+relative constraint deviation after LINCS:
+rms 3.704158, max 8.705021 (between atoms 497 and 498)
+bonds that rotated more than 90 degrees:
+ atom 1 atom 2  angle  previous, current, constraint length
+Constraint error in algorithm Lincs at step -1
+Wrote pdb files with previous and current coordinates
+Started Steepest Descents on rank 0 Wed Apr 22 13:12:41 2020
 
 Steepest Descents:
    Tolerance (Fmax)   =  1.00000e+01
@@ -331,10 +356,10 @@ Steepest Descents:
               0        0.00000
 
    Energies (kJ/mol)
-           Bond       G96Angle        LJ (SR)   Coulomb (SR)      Potential
-    6.94353e+03    8.07696e+02    5.99867e+23    4.46510e+02    5.99867e+23
- Pressure (bar)
-    0.00000e+00
+           Bond       G96Angle    Proper Dih.        LJ (SR)   Coulomb (SR)
+    4.61815e+04    7.27172e+03    2.83307e+02    9.22386e+28    1.04746e+04
+      Potential Pressure (bar)   Constr. rmsd
+    9.22386e+28    4.32096e+11    3.70416e+00
 
            Step           Time
               1        1.00000
@@ -360,38 +385,18 @@ Steepest Descents:
            Step           Time
               8        8.00000
 
-           Step           Time
-              9        9.00000
 
-           Step           Time
-             10       10.00000
+-------------------------------------------------------
+Program:     gmx mdrun, version 2018.1
+Source file: src/gromacs/mdlib/constr.cpp (line 169)
 
-           Step           Time
-             11       11.00000
+Fatal error:
+Too many LINCS warnings (1017)
+If you know what you are doing you can adjust the lincs warning threshold in
+your mdp file
+or set the environment variable GMX_MAXCONSTRWARN to -1,
+but normally it is better to fix the problem
 
-           Step           Time
-             12       12.00000
-
-           Step           Time
-             13       13.00000
-
-           Step           Time
-             14       14.00000
-
-
-Energy minimization has stopped, but the forces have not converged to the
-requested precision Fmax < 10 (which may not be possible for your system). It
-stopped because the algorithm tried to make a new step whose size was too
-small, or there was no change in the energy since last step. Either way, we
-regard the minimization as converged to within the available machine
-precision, given your starting configuration and EM parameters.
-
-Double precision normally gives you higher accuracy, but this is often not
-needed for preparing to run molecular dynamics.
-
-Steepest Descents converged to machine precision in 15 steps,
-but did not reach the requested Fmax < 10.
-Potential Energy  =  5.9986675e+23
-Maximum force     =            inf on atom 1
-Norm of force     =            inf
-Finished mdrun on rank 0 Sun Apr 19 00:00:34 2020
+For more information and tips for troubleshooting, please check the GROMACS
+website at http://www.gromacs.org/Documentation/Errors
+-------------------------------------------------------

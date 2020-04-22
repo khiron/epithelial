@@ -5,8 +5,6 @@ OQPE.itp
 OUPE.itp
 OAPE.itp
 OGPS.itp
-PQPI.itp
-DODG.itp
 PBSM.itp
 PXSM.itp
 DOPI.itp
@@ -27,3 +25,9 @@ PUMC.itp
 DPMC.itp
 OAME.itp
 IAME.itp
+DODG.itp
+PQPI.itp
+PAP1.itp
+PAP2.itp
+PQP2.itp
+PQP1.itp
