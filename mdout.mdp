@@ -2,7 +2,7 @@
 ;	File 'mdout.mdp' was generated
 ;	By user: unknown (1000)
 ;	On host: Yowie
-;	At date: Wed Apr 22 13:12:59 2020
+;	At date: Mon May 25 02:44:39 2020
 ;
 ;	Created by:
 ;	                     :-) GROMACS - gmx grompp, 2018.1 (-:
@@ -11,7 +11,7 @@
 ;	Data prefix:  /usr
 ;	Working dir:  /home/richard/projects/epithelial
 ;	Command line:
-;	  gmx grompp -f ./test.mdp -c epithelial.gro -p epithelial.top -o epithelial.tpr
+;	  gmx grompp -f ./test.mdp -c /home/richard/projects/epithelial/epithelialDPMC.gro -p /home/richard/projects/epithelial/epithelialDPMC.top -o /home/richard/projects/epithelial/epithelialDPMC.tpr
 
 ; VARIOUS PREPROCESSING OPTIONS
 ; Preprocessor information: use cpp syntax.
