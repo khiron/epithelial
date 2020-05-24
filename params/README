@@ -1,0 +1,74 @@
+#We have provided you an atomistic structure of an AMP, use the martinize.py script to convert it to a coarse-grained representation. 
+#Due to the coarse-grained representation the ELLNEDYN elastic network needs to be used to maintain secondary structure of the peptide. 
+
+#Convert protein to coarse grain
+martinize.py -f CAMEL.pdb -o CAMEL-CG.top -x CAMEL-CG.pdb -n CAMEL-CG.ndx -nmap CAMEL-CG_mapping.ndx -dssp mkdssp -name CAMEL-CG -ff martini22 -p backbone -elastic
+
+#add a box to the AMP molecule
+gmx editconf -f CAMEL-CG.pdb -o CAMEL-CG_box.pdb -box 10 10 10
+
+#Minimize the system
+gmx grompp -f minimise.mdp -c CAMEL-CG_box.pdb -p CAMEL-CG.top -o CAMEL-CG_box_EM.tpr
+gmx mdrun -v -deffnm CAMEL-CG_box_EM
+
+#Visulize the output in VMD
+#Change the representation to show the protein as VDW, show only the backbone
+
+#Solvate the system
+gmx solvate -cp CAMEL-CG_box_EM.gro -cs polarize-water.gro -p CAMEL-CG.top -o CAMEL-CG_wat.pdb
+
+#How many water particles were added?
+
+#Minimize the system
+gmx grompp -f minimise.mdp -c CAMEL-CG_wat.pdb -p CAMEL-CG.top -o CAMEL-CG_wat_EM.tpr
+gmx mdrun -v -deffnm CAMEL-CG_wat_EM
+
+Neutralize and add 0.15M NaCl
+gmx grompp -f minimise.mdp -c CAMEL-CG_wat_EM.gro -p CAMEL-CG.top -o  CAMEL-CG_genion.tpr
+gmx genion -s CAMEL-CG_genion.tpr -p CAMEL-CG.top -conc 0.15 -neutral -o CAMEL-CG_ion.gro
+>18
+
+Genion adds Na and Cl with different atom names than specified by martini .itp file so correct .gro file
+sed -i 's?NA      NA?ION    NA+?' CAMEL-CG_ion.gro
+sed -i 's?CL      CL?ION    CL-?' CAMEL-CG_ion.gro
+
+#Minimize the system
+gmx grompp -f minimise.mdp -c CAMEL-CG_ion.gro -p CAMEL-CG.top -o CAMEL-CG_ion_EM.tpr
+gmx mdrun -v -deffnm CAMEL-CG_ion_EM
+
+#Visulize the output in VMD
+#Change the representation to show only the protein, only the water, only the ions
+
+#Equilibrate your system
+gmx grompp -f equilibrate_10fs.mdp -c CAMEL-CG_ion_EM.gro -p CAMEL-CG.top -o CAMEL-CG_EQ10.tpr
+gmx mdrun -v -deffnm CAMEL-CG_EQ10
+gmx grompp -f equilibrate_20fs.mdp -c CAMEL-CG_EQ10.gro -p CAMEL-CG.top -o CAMEL-CG_EQ20.tpr
+gmx mdrun -v -deffnm CAMEL-CG_EQ20
+gmx grompp -f equilibrate_25fs.mdp -c CAMEL-CG_EQ20.gro -p CAMEL-CG.top -o CAMEL-CG_EQ25.tpr
+gmx mdrun -v -deffnm CAMEL-CG_EQ25
+
+#Run a 1us simulation on your computer
+gmx grompp -f production.mdp -c CAMEL-CG_ion_EQ.gro -p CAMEL-CG.top -o CAMEL-CG_PR.tpr
+gmx mdrun -v -deffnm CAMEL-CG_PR
+
+#Visulize the results in VMD. What do you see?
+
+
+#Project Notes
+#Change box size to region we want AMP inserted
+gmx editconf -f AA_production_r1.gro -translate 0 0 -2 -scale 1 1 0.4 -o AA_production_r1_translate.pdb -n *.ndx
+#Randomly insert AMP on extracellular side of bilayer
+gmx insert-molecules -f AA_production_r1_translate.pdb -ci CAMEL-CG.pdb -o AA_production_r1_CAMEL152.pdb -nmol 152 -try 20
+#change box size back to system size with room for solvent
+gmx editconf -f AA_production_r1_CAMEL152.pdb -o AA_production_r1_CAMEL152_box.pdb -box 35 35 15
+#Minimize system
+#solvate system
+gmx solvate -cp AA_production_r1_CAMEL152_box.pdb -cs polarize-water.gro -p CAMEL-AA.top -o CAMEL-AA_wat.pdb
+#Remove water from bilayer
+#Minimize system
+#Add ions
+#Minimize system
+#Check output in VMD are all the AMP still on the extracellular side?
+#Equilibrate your system
+#Run a 10us simulation on the supercomputer
+

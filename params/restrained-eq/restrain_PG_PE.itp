@@ -1,0 +1,5 @@
+; position restraints for PO4_bead of INSANE! Membrane UpperLeaflet>DPPG:POPG:DOPG:D2PG:D4PG:D5PG:CDL1:CDL2:CDL3:POPE:DOPE:D2PE:D3PE=6.0:22.0:4.0:3.0:14.0:3.0:13.0:7.0:6.0:11.0:2.0:8.0:1.0 LowerLeaflet>DPPG:POPG:DOPG:D2PG:D4PG:D5PG:CDL1:CDL2:CDL3:POPE:DOPE:D2PE:D3PE=6.0:22.0:4.0:3.0:14.0:3.0:13.0:7.0:6.0:11.0:2.0:8.0:1.0
+
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   2    1         0          0          2 
