@@ -10,7 +10,7 @@
 
 [ system ]
 ; name
-Complex Epithelial membrane generated (2020.05.25) using INSANE
+INSANE! Membrane
 
 [ molecules ]
 ; name  number
@@ -113,6 +113,6 @@ POPG            10
 DOPG             5
 DODG             5
 PODG            10
-PW          112897
+PW          112911
 NA+           1243
 CL-           1243

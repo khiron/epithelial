@@ -2,7 +2,7 @@
 ;	File 'mdout.mdp' was generated
 ;	By user: unknown (1000)
 ;	On host: Yowie
-;	At date: Mon May 25 02:44:39 2020
+;	At date: Mon May 25 12:54:09 2020
 ;
 ;	Created by:
 ;	                     :-) GROMACS - gmx grompp, 2018.1 (-:
@@ -11,7 +11,7 @@
 ;	Data prefix:  /usr
 ;	Working dir:  /home/richard/projects/epithelial
 ;	Command line:
-;	  gmx grompp -f ./test.mdp -c /home/richard/projects/epithelial/epithelialDPMC.gro -p /home/richard/projects/epithelial/epithelialDPMC.top -o /home/richard/projects/epithelial/epithelialDPMC.tpr
+;	  gmx grompp -f ./params/emin.mdp -c epithelial_box.pdb -p epithelial.top -o epithelial_box_EM.tpr
 
 ; VARIOUS PREPROCESSING OPTIONS
 ; Preprocessor information: use cpp syntax.
@@ -24,8 +24,8 @@ define                   =
 integrator               = steep
 ; Start time and timestep in ps
 tinit                    = 0
-dt                       = 0.01
-nsteps                   = 50
+dt                       = 0.001
+nsteps                   = 1000000
 ; For exact run continuation or redoing part of a run
 init-step                = 0
 ; Part index is updated automatically on checkpointing (keeps files separate)
@@ -44,7 +44,7 @@ ld-seed                  = -1
 
 ; ENERGY MINIMIZATION OPTIONS
 ; Force tolerance and initial step-size
-emtol                    = 10
+emtol                    = 500
 emstep                   = 0.01
 ; Max number of iterations in relax-shells
 niter                    = 20
@@ -74,13 +74,13 @@ compressed-x-precision   = 100
 ; default, all atoms will be written.
 compressed-x-grps        = 
 ; Selection of energy groups
-energygrps               = System
+energygrps               = system
 
 ; NEIGHBORSEARCHING PARAMETERS
 ; cut-off scheme (Verlet: particle based cut-offs, group: using charge groups)
 cutoff-scheme            = Verlet
 ; nblist update frequency
-nstlist                  = 30
+nstlist                  = 20
 ; ns algorithm (simple or grid)
 ns_type                  = grid
 ; Periodic boundary conditions: xyz, no, xy
@@ -155,23 +155,23 @@ sa-surface-tension       = -1
 
 ; OPTIONS FOR WEAK COUPLING ALGORITHMS
 ; Temperature coupling  
-tcoupl                   = no
+tcoupl                   = No
 nsttcouple               = -1
 nh-chain-length          = 10
 print-nose-hoover-chain-variables = no
 ; Groups to couple separately
-tc-grps                  = System
+tc-grps                  = 
 ; Time constant (ps) and reference temperature (K)
-tau_t                    = 1.0
-ref_t                    = 310
+tau-t                    = 
+ref-t                    = 
 ; pressure coupling     
-Pcoupl                   = no
-Pcoupltype               = semiisotropic
+pcoupl                   = No
+pcoupltype               = Isotropic
 nstpcouple               = -1
 ; Time constant (ps), compressibility (1/bar) and reference P (bar)
-tau_p                    = 12.0
-compressibility          = 3e-4  3e-4
-ref_p                    = 1.0  1.0
+tau-p                    = 1
+compressibility          = 
+ref-p                    = 
 ; Scaling of reference coordinates, No, All or COM
 refcoord-scaling         = No
 
@@ -211,9 +211,9 @@ annealing-time           =
 annealing-temp           = 
 
 ; GENERATE VELOCITIES FOR STARTUP RUN
-gen_vel                  = no
-gen_temp                 = 310
-gen_seed                 = -1
+gen-vel                  = no
+gen-temp                 = 300
+gen-seed                 = -1
 
 ; OPTIONS FOR BONDS    
 constraints              = none
@@ -226,14 +226,14 @@ Shake-SOR                = no
 ; Relative tolerance of shake
 shake-tol                = 0.0001
 ; Highest order in the expansion of the constraint coupling matrix
-lincs-order              = 16
+lincs_order              = 16
 ; Number of iterations in the final step of LINCS. 1 is fine for
 ; normal simulations, but use 2 to conserve energy in NVE runs.
 ; For energy minimization with constraints it should be 4 to 8.
-lincs-iter               = 10
+lincs_iter               = 8
 ; Lincs will write a warning to the stderr if in one step a bond
 ; rotates over more degrees than
-lincs-warnangle          = 90
+lincs-warnangle          = 30
 ; Convert harmonic bonds to morse potentials
 morse                    = no
 
