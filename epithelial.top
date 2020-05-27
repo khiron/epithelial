@@ -2,8 +2,6 @@
 #include "martini.ff/martini_v2.0_ions.itp"
 #include "martini.ff/martini_v2.0_lipids_all_201506.itp"
 
-#include "martini.ff/martini_v2.0_lipids_fatty_acids_201512_additional.itp"
-
 #include "martini.ff/martini_v2_epithelial.itp"
 
 #include "martini.ff/martini_v2_PI-lipids.itp"
@@ -12,7 +10,7 @@
 ; name
 INSANE! Membrane
 
-[ molecules ]
+Complex Epithelial membrane generated (2020.05.26) using INSANE
 ; name  number
 PBSM            21
 PXSM            12
@@ -113,6 +111,6 @@ POPG            10
 DOPG             5
 DODG             5
 PODG            10
-PW          112911
+PW          112933
 NA+           1243
 CL-           1243
